@@ -26,13 +26,20 @@ main {
 .board {
     width: 500px;
     height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
 }
 
 .square {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    width: calc(500px / 3);
+    height: calc(500px / 3);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
 
 }
 
