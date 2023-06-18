@@ -14,7 +14,7 @@ const button = document.querySelector(".button")
 
 const Player = (name, move) => {
     const turn = (square) => {
-        if (squares[`square ${square}`].innerText == ""  && start == true) {
+        if (squares[`square ${square}`].innerText == ""  && start == true && win == false) {
             squares[`square ${square}`].innerText = move
             moveCount++
         }
@@ -120,9 +120,10 @@ const game = {
     startRestart: () => {
         if (start == false) {
             start = true
+            button.innerText = "Restart"
 
         } else if(start == true) {
-            button.innerText = "Start"
+            
             win = false
             moveCount = 0
             gameTitle.innerText = "Let's Play!"
